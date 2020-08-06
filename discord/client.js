@@ -10,7 +10,6 @@ const addUserToGuild = (accessToken, userID, nick, roles) => {
 
         // Check if user is already in the Discord guild
         if (server.members.cache.has(userID)) {
-            console.log("Already has user.")
             let guildUser = server.members.cache.get(userID);
             let reason = "User already in guild";
             guildUser.setNickname(nick, reason).then(mem => {
