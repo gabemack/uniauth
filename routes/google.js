@@ -46,6 +46,7 @@ router.get("/redirect", forceDiscordAuth, (req, res) => {
 
         addUserToGuild(UserDiscordSession["access_token"], UserDiscordSession["discord_id"], UserGoogleSession["name"], config.DISCORD_ROLES).then(body => {
             sqlDB.createUser.run(UserAccount);
+            req.flash("notification", body);
             res.redirect("/dash");
         }).catch(err => {
             res.render("error", {

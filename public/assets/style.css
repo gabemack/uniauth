@@ -5,6 +5,13 @@ body {
     line-height: 1em;
 }
 
+.notification {
+    background-color: #21C235;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
 
 .lr {
     font-weight: 300;

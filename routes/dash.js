@@ -14,9 +14,11 @@ router.get("/", forceAuth, (req, res) => {
       accountEmail = entry["gmailAddress"];
    }
 
+   let notification = req.flash().notification || undefined;
    res.render("dash", {
       username: req.session.user["discord_name"] + "#" + req.session.user["discord_discriminator"],
-      gmailAddress: accountEmail
+      gmailAddress: accountEmail,
+      notification
    });
 });
 

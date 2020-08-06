@@ -14,7 +14,7 @@ const addUserToGuild = (accessToken, userID, nick, roles) => {
             let reason = "User already in guild";
             guildUser.setNickname(nick, reason).then(mem => {
                 guildUser.roles.add(config.DISCORD_ROLES, reason).then(member => {
-                    resolve();
+                    resolve("Your roles and name have been updated in the Discord server!");
                 }).catch(err => reject(err));
             }).catch(err => reject(err));
         } else {
@@ -24,7 +24,7 @@ const addUserToGuild = (accessToken, userID, nick, roles) => {
                 nick: nick,
                 roles: roles
             }).then(body => {
-                resolve(body);
+                resolve("You have been added to the Discord server!");
             }).catch(err => reject(err));
         }
     });
@@ -33,7 +33,7 @@ const addUserToGuild = (accessToken, userID, nick, roles) => {
 client.login(config.DISCORD_BOT_TOKEN);
 
 client.on("ready", () => {
-    console.log("Discord Account is logged in");
+    console.log(`Connected to Discord using ${client.user.username}#${client.user.discriminator}`);
 });
 
 module.exports = addUserToGuild;

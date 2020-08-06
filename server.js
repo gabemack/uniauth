@@ -3,6 +3,7 @@ const config = require("./config");
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const flash = require("express-flash");
 
 // Routes
 const oauth = require("./routes/oauth");
@@ -19,6 +20,7 @@ app.use(session({
     cookie: { secure: false }
 }));
 
+app.use(flash());
 app.use(express.static(__dirname + "/public"));
 app.use("/oauth", oauth);
 app.use("/dash", dash);
