@@ -1,5 +1,5 @@
 ### UniAuth
-UniAuth lets you restrict access to your Discord server using Google OAuth
+UniAuth lets you restrict access to your Discord server using Google OAuth. Originally created for University High School's Discord server.
 <hr>
 
 ### Installation
