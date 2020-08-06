@@ -12,3 +12,5 @@ UniAuth lets you restrict access to your Discord server using Google OAuth. Orig
    - Rename the file from `config.example.js` to `config.js`
    - Set your guild ID, and an array of role IDs that you want added to users upon authentication
    
+### Contributing
+Please do. If you run into any problems please open an issue.
