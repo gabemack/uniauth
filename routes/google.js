@@ -9,7 +9,7 @@ const router = express.Router();
 
 let oauthuri = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${config.GOOGLE_CLIENT_ID}&response_type=${config.GOOGLE_RESPONSE_TYPE}&scope=${config.GOOGLE_SCOPE}&redirect_uri=${config.GOOGLE_REDIRECT_URI}&hd=${config.GOOGLE_EMAIL_DOMAIN}&prompt=${config.GOOGLE_PROMPT}`;
 
-router.get("/login", (req, res) => {
+router.get("/login", forceDiscordAuth, (req, res) => {
     res.redirect(oauthuri);
 });
 

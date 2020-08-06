@@ -15,13 +15,6 @@ const createUser = sql.prepare("INSERT OR REPLACE INTO users (id, gmailAddress) 
 const getUser = sql.prepare("SELECT * FROM users WHERE id = ?");
 const deleteUser = sql.prepare("DELETE FROM users WHERE id = ?");
 
-// userAccount = {
-//  id: discordID
-//  gmailAddress: gmail
-// }
-
-// createUser.run(userAccount)
-
 module.exports.createUser = createUser;
 module.exports.getUser = getUser;
 module.exports.deleteUser = deleteUser;

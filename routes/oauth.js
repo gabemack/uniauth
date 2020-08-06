@@ -10,6 +10,7 @@ router.get("/login", (req, res) => {
     res.redirect(config.DISCORD_OAUTH_URI);
 });
 
+// Log out- destroy session
 router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/");

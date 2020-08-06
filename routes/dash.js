@@ -7,6 +7,8 @@ router.get("/", forceAuth, (req, res) => {
    let UserDiscordSession = req.session.user;
 
    let entry = sqlDB.getUser.get(UserDiscordSession["discord_id"]);
+   // Set account email to undefined, if they are in the DB then fill it in
+   // The EJS template handles the undefined accountEmail
    let accountEmail = undefined
    if (entry) {
       accountEmail = entry["gmailAddress"];
