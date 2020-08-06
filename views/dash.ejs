@@ -9,6 +9,7 @@
         <h1>Hello, <%= username%>!</h1>
         <% if (typeof gmailAddress != 'undefined') { %>
             <p>Your UHS Account <%= gmailAddress %> is linked to your Discord account.</p>
+            <p>Your Discord account has been added to the UHS Discord server.</p>
             <p>To reauthenticate (if you left the Discord server, if your name changed on your UHS Gmail), click the 'Reauthenticate' button.</p>
             <a href="/google/refresh">Reauthenticate</a>
             <a href="/oauth/logout">Log out</a>
