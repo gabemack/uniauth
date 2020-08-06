@@ -1,5 +1,4 @@
 node_modules/
 config.js
-users.sqlite
 users.sqlite-shm
 users.sqlite-wal
