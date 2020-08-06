@@ -7,7 +7,8 @@ const router = express.Router();
 
 // Redirect to Discord OAuth URI
 router.get("/login", (req, res) => {
-    res.redirect(config.DISCORD_OAUTH_URI);
+    let oauthuri = `https://discord.com/api/oauth2/authorize?client_id=${config.DISCORD_CLIENT_ID}&redirect_uri=${config.DISCORD_REDIRECT_URI}&response_type=code&scope=${config.DISCORD_SCOPE}`;
+    res.redirect(oauthuri);
 });
 
 // Log out- destroy session

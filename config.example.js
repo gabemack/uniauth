@@ -1,7 +1,6 @@
 const config = {
     PORT: 8080,
     SESSION_KEY: "",
-    DISCORD_OAUTH_URI: "",
     DISCORD_CLIENT_ID: "",
     DISCORD_CLIENT_SECRET: "",
     DISCORD_GRANT_TYPE: "authorization_code",

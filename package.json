@@ -1,13 +1,13 @@
 {
   "name": "uniauth",
   "version": "1.0.0",
-  "description": "",
+  "description": "Restrict access to your Discord server using Google OAuth",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gabriel Mack github.com/gabemack",
   "license": "ISC",
   "dependencies": {
     "better-sqlite3": "^7.1.0",
